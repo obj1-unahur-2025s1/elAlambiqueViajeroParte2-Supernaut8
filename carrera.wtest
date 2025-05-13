@@ -1,0 +1,10 @@
+import elAlambiqueViajero.*
+import centroDeIncripcion.*
+test "inscripcion a carrera en bagdad"{
+    centroDeInscripcion.replanificacionDeCarrera(bagdad)
+    assert.equals(5, centroDeInscripcion.vehiculosParticipantes().size())
+}
+test "inscripcion a carrera en paris"{
+    centroDeInscripcion.replanificacionDeCarrera(paris)
+    assert.equals(4, centroDeInscripcion.vehiculosParticipantes().size())
+}

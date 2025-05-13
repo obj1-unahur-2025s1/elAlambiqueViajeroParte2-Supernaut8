@@ -1,3 +1,4 @@
+import centroDeIncripcion.*
 object luke{
     var cantidadViajes = 0
     var recuerdo = null
@@ -27,6 +28,9 @@ object alambiqueVeloz {
     }
     method rapido() = rapido
     method patenteValida() = patente.head() == "A"
+    method participarEnLaCarrera(){
+        centroDeInscripcion.recibirVehiculo(self)
+    }
 }
 
 object paris{
@@ -62,7 +66,9 @@ object antigualla {
         gangsters = gangsters -1
     }
     method patenteValida() = chatarra.rapido() 
-
+    method participarEnLaCarrera(){
+        centroDeInscripcion.recibirVehiculo(self)
+    }
 }
 object chatarra {
     var cañones = 10
@@ -76,7 +82,9 @@ object chatarra {
     }
     method patenteValida() = municiones.take(4) == "ACME" 
     method cañones() = cañones
-
+    method participarEnLaCarrera(){
+        centroDeInscripcion.recibirVehiculo(self)
+    }
 }
 
 object convertible{
@@ -90,7 +98,9 @@ object convertible{
         convertido = vehiculo
     }
     method patenteValida() = convertido.patenteValida()
- 
+    method participarEnLaCarrera(){
+        centroDeInscripcion.recibirVehiculo(self)
+    }
 }
 
 object hurlingham{
@@ -105,4 +115,7 @@ object moto{
     method puedeFuncionar() = not moto.rapido()
     method desgaste() { }
     method patenteValida() = false
+    method participarEnLaCarrera(){
+        centroDeInscripcion.recibirVehiculo(self)
+    }
 }
